@@ -1,0 +1,245 @@
+@@charset "UTF-8";
+
+
+
+/* задал отступы для всех боаузеров*/
+* {
+  margin: 0;
+  padding: 0;
+  outline: none; /*НЕ РАБОТАЕТ*/
+}
+
+html {
+  height: 100%;
+}
+
+
+
+hr {
+  display: block;
+  border: 0;
+  height: 1px;
+  border-top: 1px solid #ccc;
+  padding: 0;
+}
+
+/* стили для тела сайта*/
+body {
+  height: 100%; /*высота объекта*/
+  color: #333; /*цвет шрифтов*/
+  background: #f7f7f7; /*цвет заднего фотна*/
+  font-size: 1em; /*размер шрифта*/
+  font-family: "Segoe UI", sans-serif; /*вид шрифта шрифта*/
+  line-height: 135%; /*величину пространства между строками, например в тексте*/
+}
+
+/* стили для ссылок*/
+a {
+  color: #f48b8b; /* цвет*/
+  text-decoration:none; /* ссылки не почеркиваются*/
+  transition: all.6s ease;  /* цвет меняется постепенно*/
+  -moz-transition: all.6s ease; /* цвет меняется постепенно ПАРАМЕТР ДЛЯ МАЗИЛЫ*/
+  -webkit-transition: all.6s ease;  /* цвет меняется постепенно ПАРАМЕТР ДЛЯ САФАРИ*/
+  -ms-transition: all.6s ease; /* цвет меняется постепенно ПАРАМЕТР ДЛЯ ЭКСПЛОРЕРА И ЭНДЖА*/
+}
+
+/* стили для ссылок при наведении*/
+a:hover {
+  color: #8b9ff5; /* цвет*/
+  text-decoration:none; /* ссылки не почеркиваются*/
+  transition: all.6s ease;  /* цвет меняется постепенно*/
+  -moz-transition: all.6s ease; /* цвет меняется постепенно ПАРАМЕТР ДЛЯ МАЗИЛЫ*/
+  -webkit-transition: all.6s ease;  /* цвет меняется постепенно ПАРАМЕТР ДЛЯ САФАРИ*/
+  -ms-transition: all.6s ease; /* цвет меняется постепенно ПАРАМЕТР ДЛЯ ЭКСПЛОРЕРА И ЭНДЖА*/
+}
+
+/* стили для ссылок при нажатии*/
+a:active {color: #8ce4a6;}
+
+
+/* стили для выделения текста*/
+::selection {background: #f58b8b; color: #fff}
+::-moz-selection {background: #f58b8b; color: #fff}
+
+/* ощие параметры для подвала и шапки*/
+header {
+  background-color: #fff; /*цвет страницы сделал белым*/
+  min-height: 50px; /*минимальный размер сделан, шапка и падвал растягиваль под объекты, а не чтобы объект выпадал из них*/
+  /*float: left;} /* СМЕСТИЛ ШАПКУ И ПОДВАЛ ВЛЕВО ВОЗМОЖНО ПРИДЁТСЯ УДАЛИТЬ*/
+}
+
+/*СТИЛИ ДЛЯ ШАПКИ*/
+header {
+  border-bottom: 2px solid silver; /* Свойство позволяет одновременно установить толщину, стиль и цвет границы внизу элемента.*/
+  padding: 1%;
+}
+
+/*Указали стиль для  логатипа Financial Times*/
+#logo {
+  font-size: 2em; /* размер шрифта элемента.*/
+  font-family: Comic Sans MS; sans-serif; /* стиль шрифта. НЕ РАБОТАЕТ*/
+
+}
+
+.contact {
+  font-size: 1.5em; /* размер шрифта элемента.*/
+  font-family:  Comic Sans M, sans-serif; /* стиль шрифта. НЕ РАБОТАЕТ*/
+  margin-left: 20px;
+}
+
+.field {
+  border-radius: 5px;
+  border: 2px solid silver;
+  padding: 5px;
+  margin-left: 20px;
+}
+
+.field:focus {
+outline-color:#8b9ff5;
+}
+
+/*СТИЛИ ДЛЯ ШАПКИ ЗАКОНЧИЛИСЬ*/
+
+/*Стили к конкретной новости*/
+
+main {
+display: flex;
+justify-content: center;
+}
+
+
+img {
+height: 500px;
+width: 740px; 
+}
+
+.new {
+ width: 760px;
+ height: auto;
+ margin: 10px 0px 10px 0px;
+ /* border: 4px solid red; */
+ margin-bottom: 5%;
+}
+
+.new p {
+  margin: 10px 0px 15px 0px;
+  text-align: justify;
+}
+
+.new h1 {
+    margin: 10px 0px 10px 0;
+
+}
+
+.new strong {
+    margin: 10px 0px 10px 0;
+    
+}
+
+ 
+article .prins {
+    margin: 10px;
+       
+}
+
+
+/* СТИЛИ ДЛЯ ПОДВАЛА*/
+
+.right {
+  float:right;
+}
+
+.left {
+  float: left;
+}
+
+.clear {
+  clear: both;
+}
+
+/* Записываю стили для кнопок на соцсети*/
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-left: 0;
+}
+.social-icons>li {
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+}
+.social-icons a {
+  position: relative;
+  background-color: #eee;
+  display: block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transition: background-color .3s ease-in-out;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: .25rem;
+}
+.social-icons a:hover {
+  background-color: #e0e0e0;
+}
+.social-icons a::before {
+  content: "";
+  position: absolute;
+  width: 1.2rem;
+  height: 1.2rem;
+  left: .65rem;
+  top: .65rem;
+  background: transparent no-repeat center center;
+  background-size: 100% 100%;
+}
+.social-icons .social-icon-twitter::before {
+  background-image: url(https://img.icons8.com/color/344/twitter--v1.png);
+}
+.social-icons .social-icon-fb::before {
+  background-image: url("https://img.icons8.com/fluency/344/facebook-new.png");
+}
+.social-icons .social-icon-vk::before {
+  background-image: url("https://img.icons8.com/color/344/vk-com.png");
+}
+.social-icons .social-icon-telegram::before {
+  background-image: url("https://img.icons8.com/color/344/telegram-app--v1.png");
+}
+.social-icons .social-icon-youtube::before {
+  background-image: url("https://img.icons8.com/fluency/344/youtube-play.png");
+}
+
+/* Закончил соцсети оформлять*/
+
+/* Оформил информацию о главном редакторе.*/
+.palka {
+  margin: 0;
+  padding: 0;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+/* Оформил подвал*/
+
+footer {
+  background-color: #fafafa; /*цвет страницы сделал белым*/
+  border-top: 2px solid silver;
+}
+
+footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
+  padding: 1%;
+  margin-top: auto;
+  }
